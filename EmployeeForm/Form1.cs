@@ -17,6 +17,8 @@ namespace EmployeeForm
                InitializeComponent();
           }
 
+          List<ProductionWorker> _workerList = new List<ProductionWorker>();
+
           private void EmployeeFormDataEntry_Load(object sender, EventArgs e)
           {
 
@@ -25,6 +27,19 @@ namespace EmployeeForm
           private void ExitButton_Click(object sender, EventArgs e)
           {
                this.Close();
+          }
+
+          private void EnterDataButton_Click(object sender, EventArgs e)
+          {
+               ProductionWorker worker = new ProductionWorker
+               {
+                    EmployeeName = nameTextBox.Text,
+                    EmployeeNumber = Convert.ToInt32(IdNumberTextBox.Text),
+                    ShiftNumber = Convert.ToInt32(ShiftTextBox.Text),
+                    HourlyPayRate = Convert.ToDouble(PayRateTextBox.Text)
+               };
+
+               _workerList.Add(worker);
           }
      }
 }

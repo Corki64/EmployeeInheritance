@@ -121,6 +121,7 @@
                this.EnterDataButton.TabIndex = 8;
                this.EnterDataButton.Text = "Submit";
                this.EnterDataButton.UseVisualStyleBackColor = true;
+               this.EnterDataButton.Click += new System.EventHandler(this.EnterDataButton_Click);
                // 
                // ExitButton
                // 
