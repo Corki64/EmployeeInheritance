@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmloyeeDataDisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmloyeeDataDisplayForm.Designer.cs">
+      <DependentUpon>EmloyeeDataDisplayForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -56,6 +62,9 @@
     <Compile Include="ProductionWorker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EmloyeeDataDisplayForm.resx">
+      <DependentUpon>EmloyeeDataDisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -68,6 +77,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\ProductionWorker.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
