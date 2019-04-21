@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace EmployeeForm
 {
-     public partial class EmloyeeDataDisplayForm : Form
+     public partial class EmployeeDataDisplayForm : Form
      {
-          public EmloyeeDataDisplayForm()
+          public EmployeeDataDisplayForm()
           {
                InitializeComponent();
+          }
+
+          private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+          {
+               //dataGridView1.DataSource = _workerList;
           }
      }
 }
