@@ -36,6 +36,8 @@
                this.IdNumberTextBox = new System.Windows.Forms.TextBox();
                this.ShiftTextBox = new System.Windows.Forms.TextBox();
                this.PayRateTextBox = new System.Windows.Forms.TextBox();
+               this.EnterDataButton = new System.Windows.Forms.Button();
+               this.ExitButton = new System.Windows.Forms.Button();
                this.SuspendLayout();
                // 
                // nameLabel
@@ -110,11 +112,33 @@
                this.PayRateTextBox.TabIndex = 7;
                this.PayRateTextBox.Text = "0.00";
                // 
+               // EnterDataButton
+               // 
+               this.EnterDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.EnterDataButton.Location = new System.Drawing.Point(236, 223);
+               this.EnterDataButton.Name = "EnterDataButton";
+               this.EnterDataButton.Size = new System.Drawing.Size(75, 30);
+               this.EnterDataButton.TabIndex = 8;
+               this.EnterDataButton.Text = "Submit";
+               this.EnterDataButton.UseVisualStyleBackColor = true;
+               // 
+               // ExitButton
+               // 
+               this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.ExitButton.Location = new System.Drawing.Point(12, 223);
+               this.ExitButton.Name = "ExitButton";
+               this.ExitButton.Size = new System.Drawing.Size(75, 30);
+               this.ExitButton.TabIndex = 9;
+               this.ExitButton.Text = "Exit";
+               this.ExitButton.UseVisualStyleBackColor = true;
+               // 
                // EmployeeFormDataEntry
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-               this.ClientSize = new System.Drawing.Size(323, 229);
+               this.ClientSize = new System.Drawing.Size(323, 265);
+               this.Controls.Add(this.ExitButton);
+               this.Controls.Add(this.EnterDataButton);
                this.Controls.Add(this.PayRateTextBox);
                this.Controls.Add(this.ShiftTextBox);
                this.Controls.Add(this.IdNumberTextBox);
@@ -141,6 +165,8 @@
           private System.Windows.Forms.TextBox IdNumberTextBox;
           private System.Windows.Forms.TextBox ShiftTextBox;
           private System.Windows.Forms.TextBox PayRateTextBox;
+          private System.Windows.Forms.Button EnterDataButton;
+          private System.Windows.Forms.Button ExitButton;
      }
 }
 
