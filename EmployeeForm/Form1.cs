@@ -16,5 +16,10 @@ namespace EmployeeForm
           {
                InitializeComponent();
           }
+
+          private void EmployeeFormDataEntry_Load(object sender, EventArgs e)
+          {
+
+          }
      }
 }

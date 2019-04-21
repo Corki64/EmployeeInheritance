@@ -32,55 +32,100 @@
                this.idLabel = new System.Windows.Forms.Label();
                this.shiftLabel = new System.Windows.Forms.Label();
                this.payRateLabel = new System.Windows.Forms.Label();
+               this.nameTextBox = new System.Windows.Forms.TextBox();
+               this.IdNumberTextBox = new System.Windows.Forms.TextBox();
+               this.ShiftTextBox = new System.Windows.Forms.TextBox();
+               this.PayRateTextBox = new System.Windows.Forms.TextBox();
                this.SuspendLayout();
                // 
                // nameLabel
                // 
                this.nameLabel.AutoSize = true;
-               this.nameLabel.Location = new System.Drawing.Point(89, 46);
+               this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.nameLabel.Location = new System.Drawing.Point(83, 39);
                this.nameLabel.Name = "nameLabel";
-               this.nameLabel.Size = new System.Drawing.Size(41, 13);
+               this.nameLabel.Size = new System.Drawing.Size(59, 20);
                this.nameLabel.TabIndex = 0;
                this.nameLabel.Text = "Name :";
                // 
                // idLabel
                // 
                this.idLabel.AutoSize = true;
-               this.idLabel.Location = new System.Drawing.Point(89, 90);
+               this.idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.idLabel.Location = new System.Drawing.Point(48, 79);
                this.idLabel.Name = "idLabel";
-               this.idLabel.Size = new System.Drawing.Size(64, 13);
+               this.idLabel.Size = new System.Drawing.Size(94, 20);
                this.idLabel.TabIndex = 1;
                this.idLabel.Text = "ID Number :";
                // 
                // shiftLabel
                // 
                this.shiftLabel.AutoSize = true;
-               this.shiftLabel.Location = new System.Drawing.Point(89, 136);
+               this.shiftLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.shiftLabel.Location = new System.Drawing.Point(92, 120);
                this.shiftLabel.Name = "shiftLabel";
-               this.shiftLabel.Size = new System.Drawing.Size(70, 13);
+               this.shiftLabel.Size = new System.Drawing.Size(50, 20);
                this.shiftLabel.TabIndex = 2;
-               this.shiftLabel.Text = "Shift (1 or 2) :";
+               this.shiftLabel.Text = "Shift :";
                // 
                // payRateLabel
                // 
                this.payRateLabel.AutoSize = true;
-               this.payRateLabel.Location = new System.Drawing.Point(89, 198);
+               this.payRateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.payRateLabel.Location = new System.Drawing.Point(60, 165);
                this.payRateLabel.Name = "payRateLabel";
-               this.payRateLabel.Size = new System.Drawing.Size(87, 13);
+               this.payRateLabel.Size = new System.Drawing.Size(82, 20);
                this.payRateLabel.TabIndex = 3;
-               this.payRateLabel.Text = "Pay Rate (0.00) :";
+               this.payRateLabel.Text = "Pay Rate :";
+               // 
+               // nameTextBox
+               // 
+               this.nameTextBox.Location = new System.Drawing.Point(148, 39);
+               this.nameTextBox.Name = "nameTextBox";
+               this.nameTextBox.Size = new System.Drawing.Size(156, 20);
+               this.nameTextBox.TabIndex = 4;
+               this.nameTextBox.Text = "Last, First";
+               // 
+               // IdNumberTextBox
+               // 
+               this.IdNumberTextBox.Location = new System.Drawing.Point(148, 79);
+               this.IdNumberTextBox.Name = "IdNumberTextBox";
+               this.IdNumberTextBox.Size = new System.Drawing.Size(54, 20);
+               this.IdNumberTextBox.TabIndex = 5;
+               this.IdNumberTextBox.Text = "####";
+               // 
+               // ShiftTextBox
+               // 
+               this.ShiftTextBox.Location = new System.Drawing.Point(148, 120);
+               this.ShiftTextBox.Name = "ShiftTextBox";
+               this.ShiftTextBox.Size = new System.Drawing.Size(54, 20);
+               this.ShiftTextBox.TabIndex = 6;
+               this.ShiftTextBox.Text = "1 or 2";
+               // 
+               // PayRateTextBox
+               // 
+               this.PayRateTextBox.Location = new System.Drawing.Point(148, 165);
+               this.PayRateTextBox.Name = "PayRateTextBox";
+               this.PayRateTextBox.Size = new System.Drawing.Size(54, 20);
+               this.PayRateTextBox.TabIndex = 7;
+               this.PayRateTextBox.Text = "0.00";
                // 
                // EmployeeFormDataEntry
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-               this.ClientSize = new System.Drawing.Size(800, 450);
+               this.ClientSize = new System.Drawing.Size(323, 229);
+               this.Controls.Add(this.PayRateTextBox);
+               this.Controls.Add(this.ShiftTextBox);
+               this.Controls.Add(this.IdNumberTextBox);
+               this.Controls.Add(this.nameTextBox);
                this.Controls.Add(this.payRateLabel);
                this.Controls.Add(this.shiftLabel);
                this.Controls.Add(this.idLabel);
                this.Controls.Add(this.nameLabel);
                this.Name = "EmployeeFormDataEntry";
-               this.Text = "Form1";
+               this.Text = "Employee Shift and Pay Form";
+               this.Load += new System.EventHandler(this.EmployeeFormDataEntry_Load);
                this.ResumeLayout(false);
                this.PerformLayout();
 
@@ -92,6 +137,10 @@
           private System.Windows.Forms.Label idLabel;
           private System.Windows.Forms.Label shiftLabel;
           private System.Windows.Forms.Label payRateLabel;
+          private System.Windows.Forms.TextBox nameTextBox;
+          private System.Windows.Forms.TextBox IdNumberTextBox;
+          private System.Windows.Forms.TextBox ShiftTextBox;
+          private System.Windows.Forms.TextBox PayRateTextBox;
      }
 }
 
