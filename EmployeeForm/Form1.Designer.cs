@@ -36,8 +36,10 @@
                this.IdNumberTextBox = new System.Windows.Forms.TextBox();
                this.ShiftTextBox = new System.Windows.Forms.TextBox();
                this.PayRateTextBox = new System.Windows.Forms.TextBox();
-               this.EnterDataButton = new System.Windows.Forms.Button();
                this.ExitButton = new System.Windows.Forms.Button();
+               this.EnterDataButton = new System.Windows.Forms.Button();
+               this.dataGridView1 = new System.Windows.Forms.DataGridView();
+               ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
                this.SuspendLayout();
                // 
                // nameLabel
@@ -112,17 +114,6 @@
                this.PayRateTextBox.TabIndex = 7;
                this.PayRateTextBox.Text = "0.00";
                // 
-               // EnterDataButton
-               // 
-               this.EnterDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-               this.EnterDataButton.Location = new System.Drawing.Point(236, 223);
-               this.EnterDataButton.Name = "EnterDataButton";
-               this.EnterDataButton.Size = new System.Drawing.Size(75, 30);
-               this.EnterDataButton.TabIndex = 8;
-               this.EnterDataButton.Text = "Submit";
-               this.EnterDataButton.UseVisualStyleBackColor = true;
-               this.EnterDataButton.Click += new System.EventHandler(this.EnterDataButton_Click);
-               // 
                // ExitButton
                // 
                this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,11 +125,34 @@
                this.ExitButton.UseVisualStyleBackColor = true;
                this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
                // 
+               // EnterDataButton
+               // 
+               this.EnterDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+               this.EnterDataButton.Location = new System.Drawing.Point(236, 223);
+               this.EnterDataButton.Name = "EnterDataButton";
+               this.EnterDataButton.Size = new System.Drawing.Size(75, 30);
+               this.EnterDataButton.TabIndex = 8;
+               this.EnterDataButton.Text = "Submit";
+               this.EnterDataButton.UseVisualStyleBackColor = true;
+               this.EnterDataButton.Click += new System.EventHandler(this.EnterDataButton_Click);
+               // 
+               // dataGridView1
+               // 
+               this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+               this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+               this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+               this.dataGridView1.Location = new System.Drawing.Point(0, 305);
+               this.dataGridView1.Name = "dataGridView1";
+               this.dataGridView1.Size = new System.Drawing.Size(343, 276);
+               this.dataGridView1.TabIndex = 10;
+               this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+               // 
                // EmployeeFormDataEntry
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-               this.ClientSize = new System.Drawing.Size(323, 265);
+               this.ClientSize = new System.Drawing.Size(343, 581);
+               this.Controls.Add(this.dataGridView1);
                this.Controls.Add(this.ExitButton);
                this.Controls.Add(this.EnterDataButton);
                this.Controls.Add(this.PayRateTextBox);
@@ -152,6 +166,7 @@
                this.Name = "EmployeeFormDataEntry";
                this.Text = "Employee Shift and Pay Form";
                this.Load += new System.EventHandler(this.EmployeeFormDataEntry_Load);
+               ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
                this.ResumeLayout(false);
                this.PerformLayout();
 
@@ -167,8 +182,9 @@
           private System.Windows.Forms.TextBox IdNumberTextBox;
           private System.Windows.Forms.TextBox ShiftTextBox;
           private System.Windows.Forms.TextBox PayRateTextBox;
-          private System.Windows.Forms.Button EnterDataButton;
           private System.Windows.Forms.Button ExitButton;
+          private System.Windows.Forms.Button EnterDataButton;
+          private System.Windows.Forms.DataGridView dataGridView1;
      }
 }
 

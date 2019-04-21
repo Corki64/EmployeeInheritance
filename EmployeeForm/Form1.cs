@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,17 +32,35 @@ namespace EmployeeForm
 
           private void EnterDataButton_Click(object sender, EventArgs e)
           {
-               ProductionWorker worker = new ProductionWorker
+
+
+               var worker = new ProductionWorker
                {
                     EmployeeName = nameTextBox.Text,
                     EmployeeNumber = Convert.ToInt32(IdNumberTextBox.Text),
                     ShiftNumber = Convert.ToInt32(ShiftTextBox.Text),
                     HourlyPayRate = Convert.ToDouble(PayRateTextBox.Text)
-               };
 
+               };
                _workerList.Add(worker);
 
-               
+               dataGridView1.DataSource = _workerList;
+
+               AttachObjects();
+               EmployeeFormDataEntry_Load(_workerList, e);
+          }
+
+          private void AttachObjects()
+          {
+               foreach (var worker in _workerList)
+               {
+//
+               }
+          }
+
+          private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+          {
+
           }
      }
 }
