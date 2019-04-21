@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/**
+ * This program will open a window and ask the employer to type in data pertinent to
+ * an individual employee. The data will be displayed on a grid-view window on the bottom
+ * of the main form.
+ *
+ * This program was created for class CPSC_2713 Module 6 Activity
+ *
+ * @author Luis Cortez (lac0084@auburn.edu)
+ * @version 042120191534
+ */
 namespace EmployeeForm
 {
      public partial class EmployeeFormDataEntry : Form
@@ -18,7 +21,7 @@ namespace EmployeeForm
                InitializeComponent();
           }
 
-          List<ProductionWorker> _workerList = new List<ProductionWorker>();
+          private readonly List<ProductionWorker> _workerList = new List<ProductionWorker>();
 
           private void EmployeeFormDataEntry_Load(object sender, EventArgs e)
           {
@@ -27,7 +30,7 @@ namespace EmployeeForm
 
           private void ExitButton_Click(object sender, EventArgs e)
           {
-               this.Close();
+               Close();
           }
 
           private void EnterDataButton_Click(object sender, EventArgs e)
@@ -45,20 +48,12 @@ namespace EmployeeForm
                _workerList.Add(worker);
 
                dataGridView1.DataSource = _workerList;
-
-               AttachObjects();
                EmployeeFormDataEntry_Load(_workerList, e);
           }
 
-          private void AttachObjects()
-          {
-               foreach (var worker in _workerList)
-               {
-//
-               }
-          }
 
-          private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+          private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
           {
 
           }
